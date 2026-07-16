@@ -3,8 +3,37 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Elevate Web Agency — Kenya's Premium Web Studio</title>
+<title>Elevate Web Agency — Web Design & Digital Automation in Mombasa, Kenya</title>
+<meta name="description" content="Mobile-first websites, WhatsApp booking bots and digital automation for Kenyan SMEs. Built by Jimmy in Mombasa. Live in 7-14 days, from KES 25,000.">
+<link rel="canonical" href="https://YOUR-USERNAME.github.io/elevate/">
+<meta name="theme-color" content="#0D0D0D">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Elevate Web Agency — Web Design & Digital Automation in Mombasa, Kenya">
+<meta property="og:description" content="Mobile-first websites, WhatsApp booking bots and digital automation for Kenyan SMEs. Live in 7-14 days.">
+<meta property="og:image" content="https://YOUR-USERNAME.github.io/elevate/og-cover.jpg">
+<meta property="og:url" content="https://YOUR-USERNAME.github.io/elevate/">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22%230D0D0D%22/><text x=%2250%22 y=%2268%22 font-family=%22Georgia,serif%22 font-size=%2260%22 font-weight=%22700%22 fill=%22%23C9A84C%22 text-anchor=%22middle%22>E</text></svg>">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Elevate Web Agency",
+  "founder": { "@type": "Person", "name": "Jimmy" },
+  "description": "Mobile-first websites, WhatsApp booking bots and digital automation for Kenyan SMEs.",
+  "areaServed": ["Mombasa", "Nairobi", "Kenya"],
+  "priceRange": "KES 25,000 - KES 70,000+",
+  "url": "https://YOUR-USERNAME.github.io/elevate/"
+}
+</script>
+
 <style>
   :root {
     --gold: #C9A84C;
@@ -127,24 +156,40 @@
   .section-title { font-size: clamp(1.9rem, 4vw, 2.8rem); font-weight: 800; color: var(--white); margin-bottom: 1rem; }
   .section-sub { color: var(--muted-2); font-size: 1rem; max-width: 500px; font-weight: 300; line-height: 1.75; }
 
-  /* SERVICES */
-  .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5px; margin-top: 3.5rem; border: 1.5px solid var(--border); border-radius: 12px; overflow: hidden; }
-  .service-card {
-    background: var(--dark-2); padding: 2rem;
-    transition: background 0.2s;
-    position: relative; overflow: hidden;
+  /* PRICING TABLE */
+  .pricing-wrap { margin-top: 3.5rem; overflow-x: auto; border: 1.5px solid var(--border); border-radius: 12px; }
+  .pricing-table { width: 100%; border-collapse: collapse; min-width: 640px; }
+  .pricing-table th, .pricing-table td {
+    padding: 1rem 1.2rem; text-align: left; font-size: 0.86rem; color: var(--muted-2);
+    border-bottom: 1px solid var(--border); vertical-align: top;
   }
-  .service-card::before {
-    content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
-    background: var(--gold); transform: scaleX(0); transform-origin: left;
-    transition: transform 0.3s;
+  .pricing-table thead th {
+    background: var(--dark-2); font-family: 'Syne', sans-serif; font-weight: 700;
+    color: var(--white); font-size: 0.95rem; padding-top: 1.6rem; position: relative;
   }
-  .service-card:hover { background: var(--dark-3); }
-  .service-card:hover::before { transform: scaleX(1); }
-  .service-icon { font-size: 1.8rem; margin-bottom: 1rem; }
-  .service-card h3 { font-size: 1.1rem; font-weight: 700; color: var(--white); margin-bottom: 0.6rem; }
-  .service-card p { font-size: 0.88rem; color: var(--muted); line-height: 1.7; }
-  .service-price { margin-top: 1.2rem; font-size: 0.82rem; color: var(--gold); font-weight: 500; }
+  .pricing-table thead th:first-child { color: var(--muted); font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 500; }
+  .pricing-table tbody th {
+    background: var(--dark-2); color: var(--muted); font-weight: 500; font-size: 0.78rem;
+    letter-spacing: 0.04em; text-transform: uppercase; white-space: nowrap;
+  }
+  .pricing-table td { background: var(--dark); }
+  .pricing-table .col-popular td, .pricing-table thead .col-popular { background: var(--gold-dim); }
+  .pricing-table .popular-badge {
+    display: inline-block; background: var(--gold); color: var(--dark); font-size: 0.65rem;
+    font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; padding: 3px 9px;
+    border-radius: 20px; margin-bottom: 6px;
+  }
+  .pricing-table .price-cell { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 1.15rem; color: var(--gold); }
+  .pricing-table .group-start td, .pricing-table .group-start th { border-top: 1px solid var(--border-gold); }
+  .pricing-table .cta-row td { border-bottom: none; padding-top: 1.4rem; padding-bottom: 1.6rem; }
+  .pricing-table .cta-row th { border-bottom: none; }
+  .pricing-cta {
+    display: inline-block; background: var(--gold); color: var(--dark);
+    font-family: 'Syne', sans-serif; font-weight: 700; font-size: 0.78rem;
+    padding: 0.55rem 1.1rem; border-radius: 6px; text-decoration: none; white-space: nowrap;
+  }
+  .pricing-cta:hover { background: var(--gold-light); }
+  .pricing-cta.outline { background: transparent; color: var(--text); border: 1px solid var(--border); }
 
   /* PORTFOLIO / MOCKUPS */
   .portfolio-intro { display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 1.5rem; margin-bottom: 3rem; }
@@ -284,13 +329,48 @@
   }
   @keyframes pulse { 0%,100% { transform: scale(1); opacity: 0.6; } 50% { transform: scale(1.2); opacity: 0; } }
 
+  /* FOUNDER BYLINE */
+  .founder-strip {
+    display: flex; align-items: center; justify-content: center; gap: 10px;
+    padding: 1.6rem 5% 0; text-align: center; flex-wrap: wrap;
+  }
+  .founder-strip p { font-size: 0.85rem; color: var(--muted); font-weight: 300; }
+  .founder-strip strong { color: var(--muted-2); font-weight: 500; }
+  .founder-strip .dot { color: var(--gold); }
+
+  /* FAQ */
+  .faq-list { max-width: 760px; margin: 3rem auto 0; }
+  .faq-item { border-bottom: 1px solid var(--border); }
+  .faq-q {
+    display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+    padding: 1.3rem 0; cursor: pointer; background: none; border: none; width: 100%;
+    text-align: left; font-family: 'Syne', sans-serif; font-weight: 700; font-size: 0.98rem;
+    color: var(--white);
+  }
+  .faq-q .plus { color: var(--gold); font-size: 1.2rem; flex-shrink: 0; transition: transform 0.25s; }
+  .faq-item.open .plus { transform: rotate(45deg); }
+  .faq-a {
+    max-height: 0; overflow: hidden; transition: max-height 0.3s ease, padding 0.3s ease;
+    font-size: 0.9rem; color: var(--muted-2); line-height: 1.75; font-weight: 300;
+  }
+  .faq-item.open .faq-a { max-height: 240px; padding-bottom: 1.3rem; }
+
   /* DIVIDER */
   .gold-divider { height: 1px; background: linear-gradient(90deg, transparent, var(--border-gold), transparent); margin: 0 5%; }
 
   /* RESPONSIVE */
+  .nav-toggle { display: none; background: none; border: none; color: var(--text); font-size: 1.4rem; cursor: pointer; padding: 4px 8px; }
+
   @media (max-width: 768px) {
-    nav { padding: 0.9rem 4%; }
-    .nav-links { display: none; }
+    nav { padding: 0.9rem 4%; flex-wrap: wrap; }
+    .nav-toggle { display: block; order: 2; }
+    .nav-cta { order: 3; }
+    .nav-links {
+      display: none; width: 100%; order: 4; flex-direction: column; gap: 0;
+      margin-top: 1rem; padding-top: 1rem; border-top: 1px solid var(--border);
+    }
+    .nav-links.open { display: flex; }
+    .nav-links a { padding: 0.6rem 0; }
     section { padding: 4rem 4%; }
     .hero { padding: 7rem 4% 4rem; }
     .hero-stats { gap: 1.5rem; }
@@ -302,22 +382,162 @@
   /* SCROLL REVEAL */
   .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.6s ease, transform 0.6s ease; }
   .reveal.visible { opacity: 1; transform: none; }
+
+  /* MULTI-PAGE NAV */
+  .nav-links a.active { color: var(--gold); }
+  .nav-dropdown { position: relative; }
+  .nav-dropdown-menu {
+    display: none; position: absolute; top: 130%; left: 0; min-width: 220px;
+    background: var(--dark-3); border: 1px solid var(--border); border-radius: 10px;
+    padding: 0.5rem; box-shadow: 0 12px 30px rgba(0,0,0,0.4);
+  }
+  .nav-dropdown:hover .nav-dropdown-menu { display: block; }
+  .nav-dropdown-menu a {
+    display: block; padding: 0.55rem 0.7rem; border-radius: 6px; font-size: 0.83rem;
+  }
+  .nav-dropdown-menu a:hover { background: var(--dark-4); color: var(--text); }
+  @media (max-width: 768px) {
+    .nav-dropdown-menu { display: block; position: static; border: none; background: none; padding: 0 0 0 0.8rem; box-shadow: none; }
+  }
+
+  /* PAGE HERO (inner pages) */
+  .page-hero { padding: 8.5rem 5% 3rem; text-align: center; }
+  .breadcrumb { font-size: 0.78rem; color: var(--muted); margin-bottom: 1rem; }
+  .breadcrumb a { color: var(--muted); text-decoration: none; }
+  .breadcrumb a:hover { color: var(--gold); }
+  .page-hero h1 { font-size: clamp(2.2rem, 5vw, 3.2rem); font-weight: 800; color: var(--white); max-width: 750px; margin: 0 auto 1rem; }
+  .page-hero p { color: var(--muted-2); max-width: 560px; margin: 0 auto; font-weight: 300; font-size: 1.02rem; line-height: 1.75; }
+
+  /* PORTFOLIO PLACEHOLDER IMAGES */
+  .mockup-placeholder {
+    height: 220px; position: relative; overflow: hidden;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .mockup-placeholder svg { width: 100%; height: 100%; display: block; }
+  .mockup-placeholder-tag {
+    position: absolute; bottom: 10px; right: 10px;
+    background: rgba(13,13,13,0.65); border: 1px solid var(--border-gold);
+    color: var(--gold-light); font-size: 0.62rem; letter-spacing: 0.04em;
+    text-transform: uppercase; padding: 3px 9px; border-radius: 20px; backdrop-filter: blur(4px);
+  }
+  .browser-url.is-label { color: var(--muted); font-style: italic; }
+
+  /* ABOUT PAGE */
+  .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start; margin-top: 3rem; }
+  .about-photo-block {
+    aspect-ratio: 4/5; border-radius: 12px; overflow: hidden; border: 1px solid var(--border);
+  }
+  .about-photo-block svg { width: 100%; height: 100%; display: block; }
+  .about-copy p { color: var(--muted-2); font-size: 0.95rem; line-height: 1.85; font-weight: 300; margin-bottom: 1.1rem; }
+  .about-copy h3 { color: var(--white); font-size: 1.1rem; margin: 1.6rem 0 0.6rem; }
+  .about-values { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px,1fr)); gap: 1.2rem; margin-top: 3.5rem; }
+  .about-value-card { background: var(--dark-2); border: 1px solid var(--border); border-radius: 12px; padding: 1.4rem; }
+  .about-value-card h4 { color: var(--white); font-size: 0.95rem; margin-bottom: 0.5rem; }
+  .about-value-card p { color: var(--muted); font-size: 0.83rem; line-height: 1.65; }
+  @media (max-width: 768px) { .about-grid { grid-template-columns: 1fr; } }
+
+  /* GUIDES / BLOG */
+  .guides-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px,1fr)); gap: 1.5rem; margin-top: 3rem; }
+  .guide-card {
+    background: var(--dark-2); border: 1px solid var(--border); border-radius: 12px;
+    overflow: hidden; text-decoration: none; display: block; transition: border-color 0.2s, transform 0.2s;
+  }
+  .guide-card:hover { border-color: var(--border-gold); transform: translateY(-3px); }
+  .guide-card-img { height: 160px; }
+  .guide-card-img svg { width: 100%; height: 100%; display: block; }
+  .guide-card-body { padding: 1.4rem; }
+  .guide-card-tag { font-size: 0.7rem; color: var(--gold); text-transform: uppercase; letter-spacing: 0.06em; }
+  .guide-card-body h3 { color: var(--white); font-size: 1.05rem; margin: 0.5rem 0 0.5rem; }
+  .guide-card-body p { color: var(--muted); font-size: 0.85rem; line-height: 1.6; }
+
+  .article-meta { display: flex; gap: 1rem; justify-content: center; color: var(--muted); font-size: 0.8rem; margin-bottom: 1.5rem; flex-wrap: wrap; }
+  .article-hero-img { max-width: 900px; margin: 0 auto; border-radius: 12px; overflow: hidden; border: 1px solid var(--border); }
+  .article-hero-img svg { width: 100%; height: auto; display: block; }
+  .article-body { max-width: 720px; margin: 3rem auto 0; }
+  .article-body h2 { color: var(--white); font-size: 1.5rem; margin: 2.2rem 0 1rem; }
+  .article-body h3 { color: var(--white); font-size: 1.1rem; margin: 1.6rem 0 0.7rem; }
+  .article-body p { color: var(--muted-2); font-size: 0.96rem; line-height: 1.85; font-weight: 300; margin-bottom: 1.1rem; }
+  .article-body ul, .article-body ol { color: var(--muted-2); font-size: 0.96rem; line-height: 1.85; font-weight: 300; margin: 0 0 1.1rem 1.3rem; }
+  .article-body li { margin-bottom: 0.5rem; }
+  .article-pullquote {
+    border-left: 3px solid var(--gold); padding: 0.4rem 0 0.4rem 1.4rem; margin: 1.8rem 0;
+    font-family: 'Syne', sans-serif; font-size: 1.15rem; font-weight: 600; color: var(--gold-light);
+  }
+  .article-cta {
+    background: var(--dark-2); border: 1px solid var(--border-gold); border-radius: 12px;
+    padding: 1.8rem; text-align: center; margin-top: 2.5rem;
+  }
+  .article-cta h3 { color: var(--white); margin-bottom: 0.5rem; }
+  .article-cta p { color: var(--muted-2); font-size: 0.9rem; margin-bottom: 1.2rem; }
+  .related-guides { max-width: 720px; margin: 2.5rem auto 0; display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; }
+
+  /* PRICING PAGE INTRO */
+  .pricing-note {
+    max-width: 700px; margin: 1.5rem auto 0; text-align: center; color: var(--muted);
+    font-size: 0.85rem; font-weight: 300;
+  }
+
+  /* SPA PAGE SYSTEM */
+  #app { min-height: 60vh; }
+  .page { display: none; }
+  .page.active { display: block; animation: pageIn 0.45s ease; }
+  @keyframes pageIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
+  .nav-links a.active { color: var(--gold); }
+
+  /* interactive: portfolio card tilt */
+  .mockup-card { will-change: transform; }
+
+  /* interactive: pricing row hover */
+  .pricing-table tbody tr:not(.cta-row):hover td,
+  .pricing-table tbody tr:not(.cta-row):hover th { background: var(--dark-3); }
+  .pricing-table tbody tr.col-popular:not(.cta-row):hover td,
+  .pricing-table tbody tr.col-popular:not(.cta-row):hover th { background: var(--gold-dim); }
+
+  /* interactive: back-to-top */
+  .to-top {
+    position: fixed; bottom: 28px; left: 28px; z-index: 999;
+    width: 44px; height: 44px; border-radius: 50%;
+    background: var(--dark-3); border: 1px solid var(--border-gold);
+    color: var(--gold); display: flex; align-items: center; justify-content: center;
+    cursor: pointer; opacity: 0; pointer-events: none; transition: opacity 0.25s, transform 0.2s;
+    font-size: 1.1rem;
+  }
+  .to-top.show { opacity: 1; pointer-events: auto; }
+  .to-top:hover { transform: translateY(-3px); }
+
+  /* interactive: nav progress bar on page load */
+  .load-bar {
+    position: fixed; top: 0; left: 0; height: 2px; background: var(--gold);
+    z-index: 1000; width: 0%; transition: width 0.3s ease;
+  }
+
 </style>
 </head>
 <body>
 
 <!-- NAV -->
 <nav>
-  <div class="logo">Elevate<span>.</span></div>
-  <ul class="nav-links">
-    <li><a href="#services">Services</a></li>
-    <li><a href="#portfolio">Portfolio</a></li>
-    <li><a href="#reviews">Reviews</a></li>
-    <li><a href="#process">Process</a></li>
+  <a href="#home" data-page="home" class="logo">Elevate<span>.</span></a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#home" data-page="home">Home</a></li>
+    <li><a href="#about" data-page="about">About</a></li>
+    <li><a href="#portfolio" data-page="portfolio">Portfolio</a></li>
+    <li><a href="#pricing" data-page="pricing">Pricing</a></li>
+    <li class="nav-dropdown">
+      <a href="#guides" data-page="guides">Guides ▾</a>
+      <div class="nav-dropdown-menu">
+        <a href="#guide-speed" data-page="guide-speed">Why Website Speed Matters</a>
+        <a href="#guide-maintenance" data-page="guide-maintenance">Why Maintenance Matters</a>
+      </div>
+    </li>
+    <li><a href="#home" data-page="home" data-scroll="faq">FAQ</a></li>
   </ul>
   <a href="https://wa.me/254748205591?text=Hi%20Elevate%20Web%20Agency!%20I%27d%20love%20a%20website%20for%20my%20business." class="nav-cta" target="_blank">Get a free quote ↗</a>
+  <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
 </nav>
 
+<div id="app">
+<div class="page" id="page-home">
 <!-- HERO -->
 <section class="hero">
   <div class="hero-bg"></div>
@@ -331,257 +551,66 @@
         <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
         Chat on WhatsApp
       </a>
-      <a href="#portfolio" class="btn-secondary">See our work ↓</a>
+      <a href="#portfolio" data-page="portfolio" class="btn-secondary">See our work ↓</a>
     </div>
     <div class="hero-stats">
-      <div class="stat"><div class="stat-num">30<span>+</span></div><div class="stat-label">Websites delivered</div></div>
-      <div class="stat"><div class="stat-num">100<span>%</span></div><div class="stat-label">Client satisfaction</div></div>
+      <div class="stat"><div class="stat-num" data-count="30">30<span>+</span></div><div class="stat-label">Websites delivered</div></div>
+      <div class="stat"><div class="stat-num" data-count="100">100<span>%</span></div><div class="stat-label">Client satisfaction</div></div>
       <div class="stat"><div class="stat-num">7<span>-14</span></div><div class="stat-label">Days to launch</div></div>
-      <div class="stat"><div class="stat-num">3<span>x</span></div><div class="stat-label">Avg booking increase</div></div>
+      <div class="stat"><div class="stat-num" data-count="3">3<span>x</span></div><div class="stat-label">Avg booking increase</div></div>
     </div>
   </div>
 </section>
 
+<div class="founder-strip">
+  <p><strong>Built and run by Jimmy</strong> <span class="dot">·</span> Based in Mombasa, Kenya <span class="dot">·</span> Direct WhatsApp line to the person who actually builds your site — no account managers, no relay</p>
+</div>
+
 <div class="gold-divider"></div>
 
-<!-- SERVICES -->
+<!-- SERVICES TEASER -->
 <section id="services">
   <div class="container">
-    <div class="reveal">
-      <div class="section-label">What we do</div>
+    <div class="reveal" style="text-align:center;">
+      <div class="section-label" style="justify-content:center;">What we do</div>
       <h2 class="section-title">Everything your business needs online</h2>
-      <p class="section-sub">From a simple professional page to a full booking system — we build it right, the first time.</p>
+      <p class="section-sub" style="margin:0 auto;">From a simple professional page to a full booking system — we build it right, the first time. Three packages, transparent pricing, zero surprises.</p>
     </div>
-    <div class="services-grid reveal">
-      <div class="service-card">
-        <div class="service-icon">🎨</div>
-        <h3>Starter Website</h3>
-        <p>A clean, mobile-ready 5-page site with your services, gallery, and a contact form. Perfect for getting online fast.</p>
-        <div class="service-price">From KES 25,000 · One-time</div>
+    <div class="services-teaser-grid reveal" style="display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:1.2rem; margin-top:3rem;">
+      <div style="background:var(--dark-2); border:1px solid var(--border); border-radius:12px; padding:1.8rem; text-align:center;">
+        <div style="font-size:0.75rem; color:var(--muted); text-transform:uppercase; letter-spacing:0.06em;">Starter</div>
+        <div style="font-family:'Syne',sans-serif; font-weight:800; font-size:1.4rem; color:var(--white); margin:0.5rem 0;">From KES 25,000</div>
+        <p style="color:var(--muted); font-size:0.85rem;">New & small businesses</p>
       </div>
-      <div class="service-card">
-        <div class="service-icon">⚡</div>
-        <h3>Studio Pro</h3>
-        <p>Full portfolio, automated booking form sent to WhatsApp or email, testimonials, Google Maps, and more. Our most popular package.</p>
-        <div class="service-price">From KES 45,000 · One-time</div>
+      <div style="background:var(--gold-dim); border:1px solid var(--border-gold); border-radius:12px; padding:1.8rem; text-align:center;">
+        <div style="font-size:0.75rem; color:var(--gold); text-transform:uppercase; letter-spacing:0.06em;">Studio Pro · Most Popular</div>
+        <div style="font-family:'Syne',sans-serif; font-weight:800; font-size:1.4rem; color:var(--white); margin:0.5rem 0;">From KES 55,000</div>
+        <p style="color:var(--muted-2); font-size:0.85rem;">Service-based businesses</p>
       </div>
-      <div class="service-card">
-        <div class="service-icon">👑</div>
-        <h3>Premium Brand Site</h3>
-        <p>Everything in Pro plus online payments, WhatsApp chat widget, blog, and custom animations. For brands ready to dominate.</p>
-        <div class="service-price">From KES 70,000 · One-time</div>
+      <div style="background:var(--dark-2); border:1px solid var(--border); border-radius:12px; padding:1.8rem; text-align:center;">
+        <div style="font-size:0.75rem; color:var(--muted); text-transform:uppercase; letter-spacing:0.06em;">Premium Brand</div>
+        <div style="font-family:'Syne',sans-serif; font-weight:800; font-size:1.4rem; color:var(--white); margin:0.5rem 0;">Custom Quote</div>
+        <p style="color:var(--muted); font-size:0.85rem;">Established brands</p>
       </div>
-      <div class="service-card">
-        <div class="service-icon">🔧</div>
-        <h3>Monthly Support</h3>
-        <p>We handle updates, edits, performance checks, and keep your site running perfectly so you focus on your business.</p>
-        <div class="service-price">From KES 3,000/month</div>
-      </div>
+    </div>
+    <div style="text-align:center; margin-top:2rem;">
+      <a href="#pricing" data-page="pricing" class="btn-secondary">See full feature comparison ↗</a>
     </div>
   </div>
 </section>
 
 <div class="gold-divider"></div>
 
-<!-- PORTFOLIO -->
-<section id="portfolio" style="background:var(--dark-2);">
+<!-- PORTFOLIO TEASER -->
+<section style="background:var(--dark-2);">
   <div class="container">
     <div class="portfolio-intro reveal">
       <div>
         <div class="section-label">Our work</div>
         <h2 class="section-title">Built for Kenyan businesses</h2>
-        <p class="section-sub">Real websites, real results. Each site crafted to convert visitors into paying clients.</p>
+        <p class="section-sub">Concept builds crafted to show exactly how your business could look online.</p>
       </div>
-      <a href="https://wa.me/254748205591?text=Hi!%20I%20saw%20your%20portfolio%20and%20I%27d%20love%20a%20website%20like%20this." class="btn-secondary" target="_blank" style="flex-shrink:0;">Start your project ↗</a>
-    </div>
-
-    <div class="mockup-grid reveal">
-
-      <!-- Beauty Studio Mockup -->
-      <div class="mockup-card">
-        <div class="browser-bar">
-          <div class="browser-dots"><span class="d1"></span><span class="d2"></span><span class="d3"></span></div>
-          <div class="browser-url">lindajenna.co.ke</div>
-        </div>
-        <div class="mockup-screen">
-          <div class="ms-beauty">
-            <div class="ms-beauty-nav">
-              <div class="ms-beauty-logo">LINDA JENNA</div>
-              <div class="ms-beauty-links"><span>Services</span><span>Gallery</span><span>Book</span></div>
-            </div>
-            <div class="ms-beauty-hero">
-              <h2>Nairobi's Premier<br>Makeup Studio</h2>
-              <p>Bridal · Editorial · Glam · Events</p>
-              <div class="ms-beauty-btn">Book Appointment →</div>
-            </div>
-            <div class="ms-beauty-gallery">
-              <div class="ms-beauty-img"></div>
-              <div class="ms-beauty-img"></div>
-              <div class="ms-beauty-img"></div>
-            </div>
-          </div>
-        </div>
-        <div class="mockup-info">
-          <div>
-            <div class="mockup-name">Linda Jenna Makeup Studio</div>
-            <div style="font-size:0.78rem;color:var(--muted);margin-top:2px;">Beauty · Nairobi</div>
-          </div>
-          <div class="mockup-tag">Beauty Studio</div>
-        </div>
-      </div>
-
-      <!-- Hotel Mockup -->
-      <div class="mockup-card">
-        <div class="browser-bar">
-          <div class="browser-dots"><span class="d1"></span><span class="d2"></span><span class="d3"></span></div>
-          <div class="browser-url">seasideresort.co.ke</div>
-        </div>
-        <div class="mockup-screen">
-          <div class="ms-hotel">
-            <div class="ms-hotel-band">🌊 Mombasa's Most Loved Coastal Resort</div>
-            <div class="ms-hotel-logo">SEASIDE RESORT</div>
-            <div class="ms-hotel-hero">
-              <div class="ms-hotel-hero-text">
-                <h3>Your Perfect Escape<br>Awaits in Mombasa</h3>
-                <p>Beachfront rooms from KES 8,500/night</p>
-              </div>
-            </div>
-            <div class="ms-hotel-cards">
-              <div class="ms-hotel-card"><div class="ms-hotel-card-icon">🏖️</div><div class="ms-hotel-card-label">Private Beach</div></div>
-              <div class="ms-hotel-card"><div class="ms-hotel-card-icon">🍽️</div><div class="ms-hotel-card-label">Ocean Dining</div></div>
-              <div class="ms-hotel-card"><div class="ms-hotel-card-icon">📅</div><div class="ms-hotel-card-label">Book Online</div></div>
-            </div>
-          </div>
-        </div>
-        <div class="mockup-info">
-          <div>
-            <div class="mockup-name">Seaside Resort Mombasa</div>
-            <div style="font-size:0.78rem;color:var(--muted);margin-top:2px;">Hospitality · Mombasa</div>
-          </div>
-          <div class="mockup-tag">Hotel</div>
-        </div>
-      </div>
-
-      <!-- Restaurant Mockup -->
-      <div class="mockup-card">
-        <div class="browser-bar">
-          <div class="browser-dots"><span class="d1"></span><span class="d2"></span><span class="d3"></span></div>
-          <div class="browser-url">nyamachomakings.co.ke</div>
-        </div>
-        <div class="mockup-screen">
-          <div class="ms-resto">
-            <div class="ms-resto-top">
-              <div class="ms-resto-logo">NYAMA KINGS</div>
-              <div class="ms-resto-btn">Order Now →</div>
-            </div>
-            <div class="ms-resto-hero">
-              <h3>The Best Nyama Choma<br>in Nairobi 🔥</h3>
-            </div>
-            <div class="ms-resto-menu">
-              <div class="ms-resto-item"><div class="ms-resto-item-name">Goat Ribs (500g)</div><div class="ms-resto-item-price">KES 950</div></div>
-              <div class="ms-resto-item"><div class="ms-resto-item-name">Whole Chicken</div><div class="ms-resto-item-price">KES 1,200</div></div>
-              <div class="ms-resto-item"><div class="ms-resto-item-name">Beef Fry</div><div class="ms-resto-item-price">KES 750</div></div>
-              <div class="ms-resto-item"><div class="ms-resto-item-name">Pork Chops</div><div class="ms-resto-item-price">KES 850</div></div>
-            </div>
-          </div>
-        </div>
-        <div class="mockup-info">
-          <div>
-            <div class="mockup-name">Nyama Kings Restaurant</div>
-            <div style="font-size:0.78rem;color:var(--muted);margin-top:2px;">Food & Dining · Nairobi</div>
-          </div>
-          <div class="mockup-tag">Restaurant</div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<div class="gold-divider"></div>
-
-<!-- REVIEWS -->
-<section id="reviews">
-  <div class="container">
-    <div class="reveal" style="text-align:center; margin-bottom:0;">
-      <div class="section-label" style="justify-content:center;">Client love</div>
-      <h2 class="section-title">What our clients say</h2>
-      <p class="section-sub" style="margin:0 auto;">Real feedback from real Kenyan business owners.</p>
-    </div>
-    <div class="reviews-grid reveal">
-
-      <div class="review-card">
-        <div class="review-stars">★★★★★</div>
-        <p class="review-text">"I was getting lost in DMs trying to manage bookings. Since my website went live, clients book directly online and I save at least 2 hours every day. Best investment I've made for the salon."</p>
-        <div class="review-author">
-          <div class="review-avatar" style="background:#FBEAF0;color:#993556;">AW</div>
-          <div>
-            <div class="review-name">Amina Wanjiku</div>
-            <div class="review-biz">Glow Beauty Salon, Westlands</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="review-card">
-        <div class="review-stars">★★★★★</div>
-        <p class="review-text">"I was skeptical at first but the results speak for themselves. Within 3 weeks of launching, I got 4 new room bookings from Google searches alone. The site looks incredibly professional."</p>
-        <div class="review-author">
-          <div class="review-avatar" style="background:#E1F5EE;color:#085041;">DM</div>
-          <div>
-            <div class="review-name">David Mutua</div>
-            <div class="review-biz">Mutua Executive Guesthouses, Mombasa</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="review-card">
-        <div class="review-stars">★★★★★</div>
-        <p class="review-text">"Our menu is now online, customers share our site on WhatsApp, and we started getting catering inquiries we never used to get. Jimmy built exactly what we needed and was super responsive throughout."</p>
-        <div class="review-author">
-          <div class="review-avatar" style="background:#FAEEDA;color:#633806;">FK</div>
-          <div>
-            <div class="review-name">Faith Kamau</div>
-            <div class="review-biz">Mama Osha Restaurant, Kiambu</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="review-card">
-        <div class="review-stars">★★★★★</div>
-        <p class="review-text">"Fast, professional, and he understood exactly what a hardware business in Kenya actually needs. No fluff. The site has our product catalogue, location, and a WhatsApp button. Clients love it."</p>
-        <div class="review-author">
-          <div class="review-avatar" style="background:#E6F1FB;color:#0C447C;">JO</div>
-          <div>
-            <div class="review-name">James Otieno</div>
-            <div class="review-biz">Meridian Hardware Supplies, Nairobi</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="review-card">
-        <div class="review-stars">★★★★★</div>
-        <p class="review-text">"My clinic needed something that looked trustworthy and clean. Elevate delivered exactly that. Patient inquiries have doubled since we went online and we now rank on Google for our area."</p>
-        <div class="review-author">
-          <div class="review-avatar" style="background:#EAF3DE;color:#27500A;">DN</div>
-          <div>
-            <div class="review-name">Dr. Nganga</div>
-            <div class="review-biz">Uzima Family Clinic, Thika</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="review-card">
-        <div class="review-stars">★★★★★</div>
-        <p class="review-text">"Very affordable for the quality. I had a full website live in under 2 weeks with a booking form connected straight to my WhatsApp. Other developers quoted me 3x more for less. Highly recommend."</p>
-        <div class="review-author">
-          <div class="review-avatar" style="background:#FCEBEB;color:#791F1F;">ZA</div>
-          <div>
-            <div class="review-name">Zara Abdi</div>
-            <div class="review-biz">Zara Events & Décor, Nairobi</div>
-          </div>
-        </div>
-      </div>
-
+      <a href="#portfolio" data-page="portfolio" class="btn-secondary" style="flex-shrink:0;">View full portfolio ↗</a>
     </div>
   </div>
 </section>
@@ -589,7 +618,7 @@
 <div class="gold-divider"></div>
 
 <!-- PROCESS -->
-<section id="process" style="background:var(--dark-2);">
+<section id="process">
   <div class="container">
     <div class="reveal" style="text-align:center;">
       <div class="section-label" style="justify-content:center;">How it works</div>
@@ -621,6 +650,51 @@
   </div>
 </section>
 
+<div class="gold-divider"></div>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="container">
+    <div class="reveal" style="text-align:center;">
+      <div class="section-label" style="justify-content:center;">Before you message us</div>
+      <h2 class="section-title" style="font-size:1.9rem;">Questions we get a lot</h2>
+    </div>
+    <div class="faq-list reveal">
+
+      <div class="faq-item">
+        <button class="faq-q">How much does a website cost? <span class="plus">+</span></button>
+        <div class="faq-a">Packages start at KES 25,000 for a Starter site and scale up based on features like booking forms and payments. See the full <a href="#pricing" data-page="pricing" style="color:var(--gold);">feature comparison</a> or message us for a custom quote.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q">Do I have to pay everything upfront? <span class="plus">+</span></button>
+        <div class="faq-a">No. We work on a 50/50 split — half to start the build, half on delivery once you've seen and approved the finished site. You're never paying in full for something you haven't seen.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q">How long does it take to go live? <span class="plus">+</span></button>
+        <div class="faq-a">Typically 7-14 days from approving the design to launch, depending on the package and how quickly you get us your content (logo, photos, text).</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q">Will it work well on phones? <span class="plus">+</span></button>
+        <div class="faq-a">Every site we build is mobile-first from the ground up — most of your customers in Kenya are browsing on a phone, so that's the experience we design for first, not as an afterthought.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q">Do you offer support after launch? <span class="plus">+</span></button>
+        <div class="faq-a">Yes — see our <a href="#guide-maintenance" data-page="guide-maintenance" style="color:var(--gold);">website maintenance guide</a> for why it matters. Optional monthly support from KES 3,000/month covers edits, updates, and keeping things running.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q">Do we need to hop on a call? <span class="plus">+</span></button>
+        <div class="faq-a">No calls needed. Everything runs over WhatsApp — including a short video walkthrough of your custom mockup before you commit to anything.</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
 <!-- CTA -->
 <div class="cta-section">
   <div class="cta-inner reveal">
@@ -629,21 +703,581 @@
     <p>Get a free consultation today. No pressure, no commitment — just a quick chat about what your business needs.</p>
     <a href="https://wa.me/254748205591?text=Hi%20Elevate%20Web%20Agency!%20I%27d%20love%20to%20discuss%20a%20website%20for%20my%20business." class="btn-primary" target="_blank" style="font-size:1rem; padding:1rem 2rem;">
       <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
-      WhatsApp us now — it's free
+      Start the conversation
     </a>
   </div>
 </div>
+
+
+</div>
+
+<div class="page" id="page-about">
+<div class="page-hero">
+  <div class="breadcrumb"><a href="#home" data-page="home">Home</a> / About</div>
+  <div class="hero-eyebrow" style="margin-left:auto;margin-right:auto;">About Us</div>
+  <h1>A Mombasa-built agency, run by one person who actually codes.</h1>
+  <p>Elevate Web Agency exists because too many Kenyan SMEs are still invisible online — no website, no booking system, just a phone number and a hope. We fix that.</p>
+</div>
+
+<section>
+  <div class="container">
+    <div class="about-grid" style="grid-template-columns:1fr;">
+      <div class="about-copy reveal" style="max-width:720px;">
+        <div class="section-label">The story</div>
+        <p>Elevate Web Agency is a Mombasa-based web design and digital automation studio. We build mobile-first websites, WhatsApp booking bots, and simple automation tools for local businesses — lodges, beauty studios, restaurants, colleges, and everything in between.</p>
+        <p>The agency is built and run by <strong>Jimmy</strong>. There's no account manager sitting between you and the person coding your site — when you message on WhatsApp, you're talking directly to the developer who builds it, tests it, and keeps it running after launch.</p>
+        <h3>Why WhatsApp-first?</h3>
+        <p>Most Kenyan business owners are already living on WhatsApp. So instead of forcing you into calls or a contact form that disappears into an inbox, the entire process — from your first message to the final handover — happens in a chat thread you can revisit anytime.</p>
+        <h3>Why mobile-first?</h3>
+        <p>The majority of your customers will find you on a phone, on Kenyan mobile data, not a desktop browser. Every Elevate site is designed for that reality first — fast to load, easy to tap, built to convert on a small screen before it's ever polished for a big one.</p>
+      </div>
+    </div>
+
+    <div class="about-values reveal">
+      <div class="about-value-card">
+        <h4>🎯 Built to convert</h4>
+        <p>Every page has a job — turning a visitor into a booking, an inquiry, or a WhatsApp message. Nothing on the site is decorative.</p>
+      </div>
+      <div class="about-value-card">
+        <h4>⚡ Fast by default</h4>
+        <p>Lightweight code, no bloated page builders. Sites load quickly even on average Kenyan mobile connections.</p>
+      </div>
+      <div class="about-value-card">
+        <h4>🤝 No middlemen</h4>
+        <p>You work directly with Jimmy from first message to final handover — no relay through a sales team.</p>
+      </div>
+      <div class="about-value-card">
+        <h4>💬 Transparent pricing</h4>
+        <p>50/50 milestone payments, clear packages, no surprise invoices. See the <a href="#pricing" data-page="pricing" style="color:var(--gold);">full pricing breakdown</a>.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="cta-section">
+  <div class="cta-inner reveal">
+    <div class="section-label" style="justify-content:center;">Let's talk</div>
+    <h2>Got a business that needs to be found online?</h2>
+    <p>Message Jimmy directly on WhatsApp — no forms, no waiting on a callback.</p>
+    <a href="https://wa.me/254748205591?text=Hi%20Jimmy!%20I%27d%20love%20to%20discuss%20a%20website%20for%20my%20business." class="btn-primary" target="_blank" style="font-size:1rem; padding:1rem 2rem;">Start the conversation</a>
+  </div>
+</div>
+
+
+</div>
+
+<div class="page" id="page-portfolio">
+<div class="page-hero">
+  <div class="breadcrumb"><a href="#home" data-page="home">Home</a> / Portfolio</div>
+  <div class="hero-eyebrow" style="margin-left:auto;margin-right:auto;">Our Work</div>
+  <h1>Concept builds for real Kenyan business types</h1>
+  <p>Each of these is a design concept showing exactly how your business could look and convert online — the same process every client goes through before a single shilling changes hands.</p>
+</div>
+
+<section style="padding-top:1rem;">
+  <div class="container">
+    <div class="mockup-grid reveal">
+
+      <!-- Beauty Studio -->
+      <div class="mockup-card">
+        <div class="browser-bar">
+          <div class="browser-dots"><span class="d1"></span><span class="d2"></span><span class="d3"></span></div>
+          <div class="browser-url is-label">Concept build</div>
+        </div>
+        <div class="mockup-placeholder">
+          <svg viewBox="0 0 400 220" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="g1" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#2D1020"/><stop offset="50%" stop-color="#8B2252"/><stop offset="100%" stop-color="#E8A0B8"/>
+              </linearGradient>
+            </defs>
+            <rect width="400" height="220" fill="url(#g1)"/>
+            <circle cx="90" cy="60" r="70" fill="#ffffff" fill-opacity="0.07"/>
+            <circle cx="330" cy="170" r="100" fill="#ffffff" fill-opacity="0.06"/>
+          </svg>
+          <div class="mockup-placeholder-tag">AI concept visual</div>
+        </div>
+        <div class="mockup-info">
+          <div>
+            <div class="mockup-name">Bridal & Makeup Studio</div>
+            <div style="font-size:0.78rem;color:var(--muted);margin-top:2px;">Beauty · Nairobi</div>
+          </div>
+          <div class="mockup-tag">Beauty Studio</div>
+        </div>
+      </div>
+
+      <!-- Hotel -->
+      <div class="mockup-card">
+        <div class="browser-bar">
+          <div class="browser-dots"><span class="d1"></span><span class="d2"></span><span class="d3"></span></div>
+          <div class="browser-url is-label">Concept build</div>
+        </div>
+        <div class="mockup-placeholder">
+          <svg viewBox="0 0 400 220" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="g2" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#0a1a12"/><stop offset="50%" stop-color="#0d4024"/><stop offset="100%" stop-color="#8FD4A8"/>
+              </linearGradient>
+            </defs>
+            <rect width="400" height="220" fill="url(#g2)"/>
+            <circle cx="320" cy="50" r="80" fill="#ffffff" fill-opacity="0.07"/>
+            <circle cx="70" cy="180" r="90" fill="#ffffff" fill-opacity="0.05"/>
+          </svg>
+          <div class="mockup-placeholder-tag">AI concept visual</div>
+        </div>
+        <div class="mockup-info">
+          <div>
+            <div class="mockup-name">Coastal Beach Resort</div>
+            <div style="font-size:0.78rem;color:var(--muted);margin-top:2px;">Hospitality · Mombasa</div>
+          </div>
+          <div class="mockup-tag">Hotel</div>
+        </div>
+      </div>
+
+      <!-- Restaurant -->
+      <div class="mockup-card">
+        <div class="browser-bar">
+          <div class="browser-dots"><span class="d1"></span><span class="d2"></span><span class="d3"></span></div>
+          <div class="browser-url is-label">Concept build</div>
+        </div>
+        <div class="mockup-placeholder">
+          <svg viewBox="0 0 400 220" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="g3" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#1a1208"/><stop offset="50%" stop-color="#6b4800"/><stop offset="100%" stop-color="#F0D080"/>
+              </linearGradient>
+            </defs>
+            <rect width="400" height="220" fill="url(#g3)"/>
+            <circle cx="100" cy="170" r="90" fill="#ffffff" fill-opacity="0.06"/>
+            <circle cx="330" cy="40" r="70" fill="#ffffff" fill-opacity="0.07"/>
+          </svg>
+          <div class="mockup-placeholder-tag">AI concept visual</div>
+        </div>
+        <div class="mockup-info">
+          <div>
+            <div class="mockup-name">Nyama Choma Restaurant</div>
+            <div style="font-size:0.78rem;color:var(--muted);margin-top:2px;">Food & Dining · Nairobi</div>
+          </div>
+          <div class="mockup-tag">Restaurant</div>
+        </div>
+      </div>
+
+      <!-- College -->
+      <div class="mockup-card">
+        <div class="browser-bar">
+          <div class="browser-dots"><span class="d1"></span><span class="d2"></span><span class="d3"></span></div>
+          <div class="browser-url is-label">Concept build</div>
+        </div>
+        <div class="mockup-placeholder">
+          <svg viewBox="0 0 400 220" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="g4" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#0a1220"/><stop offset="50%" stop-color="#153a6b"/><stop offset="100%" stop-color="#8FB5E8"/>
+              </linearGradient>
+            </defs>
+            <rect width="400" height="220" fill="url(#g4)"/>
+            <circle cx="330" cy="170" r="85" fill="#ffffff" fill-opacity="0.06"/>
+            <circle cx="80" cy="40" r="65" fill="#ffffff" fill-opacity="0.07"/>
+          </svg>
+          <div class="mockup-placeholder-tag">AI concept visual</div>
+        </div>
+        <div class="mockup-info">
+          <div>
+            <div class="mockup-name">Foreign Languages College</div>
+            <div style="font-size:0.78rem;color:var(--muted);margin-top:2px;">Education · Mombasa</div>
+          </div>
+          <div class="mockup-tag">College</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<div class="gold-divider"></div>
+
+<div class="cta-section">
+  <div class="cta-inner reveal">
+    <div class="section-label" style="justify-content:center;">Like what you see?</div>
+    <h2>Let's build yours next</h2>
+    <p>Tell us about your business on WhatsApp and we'll put together a custom concept — no cost, no commitment.</p>
+    <a href="https://wa.me/254748205591?text=Hi!%20I%20saw%20your%20portfolio%20and%20I%27d%20love%20a%20website%20like%20this." class="btn-primary" target="_blank" style="font-size:1rem; padding:1rem 2rem;">Start the conversation</a>
+  </div>
+</div>
+
+
+</div>
+
+<div class="page" id="page-pricing">
+<div class="page-hero">
+  <div class="breadcrumb"><a href="#home" data-page="home">Home</a> / Pricing</div>
+  <div class="hero-eyebrow" style="margin-left:auto;margin-right:auto;">Pricing</div>
+  <h1>Three packages. Transparent pricing. No surprise invoices.</h1>
+  <p>Every package includes a 50/50 milestone payment plan — half to start, half on delivery. Compare features below or message us for a custom quote.</p>
+</div>
+
+<section style="padding-top:1rem;">
+  <div class="container">
+    <div class="pricing-wrap reveal">
+      <table class="pricing-table">
+        <thead>
+          <tr>
+            <th>Feature</th>
+            <th>Starter Website</th>
+            <th class="col-popular"><span class="popular-badge">Most Popular</span><br>Studio Pro</th>
+            <th>Premium Brand Site</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th>Price</th>
+            <td class="price-cell">From KES 25,000</td>
+            <td class="col-popular price-cell">From KES 55,000</td>
+            <td class="price-cell">Custom Quote</td>
+          </tr>
+          <tr>
+            <th>Billing</th>
+            <td>One-time fee</td>
+            <td class="col-popular">One-time fee</td>
+            <td>Project-based</td>
+          </tr>
+          <tr class="group-start">
+            <th>Best for</th>
+            <td>New / small SMEs</td>
+            <td class="col-popular">Service-based businesses</td>
+            <td>Established brands</td>
+          </tr>
+          <tr class="group-start">
+            <th>Page count</th>
+            <td>Up to 5 pages</td>
+            <td class="col-popular">Up to 10 pages</td>
+            <td>Unlimited</td>
+          </tr>
+          <tr>
+            <th>Mobile responsive</th>
+            <td>Included</td>
+            <td class="col-popular">Included</td>
+            <td>Included</td>
+          </tr>
+          <tr>
+            <th>Core content</th>
+            <td>Services & gallery</td>
+            <td class="col-popular">Full portfolio</td>
+            <td>Advanced layouts</td>
+          </tr>
+          <tr>
+            <th>Contact & leads</th>
+            <td>Standard contact form</td>
+            <td class="col-popular">WhatsApp / email booking</td>
+            <td>CRM & automations</td>
+          </tr>
+          <tr>
+            <th>Trust builders</th>
+            <td>Basic social links</td>
+            <td class="col-popular">Testimonials & Google Maps</td>
+            <td>Video & case studies</td>
+          </tr>
+          <tr class="group-start">
+            <th>SEO foundation</th>
+            <td>Technical SEO (sitemap)</td>
+            <td class="col-popular">On-page optimization</td>
+            <td>Full competitive SEO</td>
+          </tr>
+          <tr>
+            <th>Speed optimisation</th>
+            <td>Standard</td>
+            <td class="col-popular">Advanced caching</td>
+            <td>Premium CDN setup</td>
+          </tr>
+          <tr>
+            <th>Security</th>
+            <td>Free SSL setup</td>
+            <td class="col-popular">Free SSL setup</td>
+            <td>Advanced firewalls</td>
+          </tr>
+          <tr class="group-start">
+            <th>M-Pesa / card payment</th>
+            <td>Add-on available</td>
+            <td class="col-popular">Add-on available</td>
+            <td>Included</td>
+          </tr>
+          <tr>
+            <th>WhatsApp chat widget</th>
+            <td>Add-on available</td>
+            <td class="col-popular">Included</td>
+            <td>Included</td>
+          </tr>
+          <tr class="group-start">
+            <th>Ongoing maintenance</th>
+            <td>KES 3,000 / month</td>
+            <td class="col-popular">KES 5,000 / month</td>
+            <td>Tailored SLA</td>
+          </tr>
+          <tr class="cta-row">
+            <th></th>
+            <td>
+              <a href="https://wa.me/254748205591?text=Hi%20Elevate%20Web%20Agency!%20I%27d%20like%20the%20Starter%20Website%20package%20(KES%2025%2C000)." class="pricing-cta outline" target="_blank">Get started ↗</a>
+            </td>
+            <td class="col-popular">
+              <a href="https://wa.me/254748205591?text=Hi%20Elevate%20Web%20Agency!%20I%27d%20like%20the%20Studio%20Pro%20package%20(KES%2055%2C000)." class="pricing-cta" target="_blank">Get started ↗</a>
+            </td>
+            <td>
+              <a href="https://wa.me/254748205591?text=Hi%20Elevate%20Web%20Agency!%20I%27d%20like%20a%20custom%20quote%20for%20the%20Premium%20Brand%20Site." class="pricing-cta outline" target="_blank">Book a free audit ↗</a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="pricing-note">Not sure which package fits? Message us on WhatsApp with a bit about your business and we'll recommend one — no pressure, no pushy sales pitch.</p>
+    <p class="pricing-note">Curious why the speed and maintenance rows matter so much? Read our guides on <a href="#guide-speed" data-page="guide-speed" style="color:var(--gold);">why website speed matters</a> and <a href="#guide-maintenance" data-page="guide-maintenance" style="color:var(--gold);">why maintenance matters</a>.</p>
+  </div>
+</section>
+
+<div class="gold-divider"></div>
+
+<div class="cta-section">
+  <div class="cta-inner reveal">
+    <div class="section-label" style="justify-content:center;">Ready to grow?</div>
+    <h2>Pick a package, or let's figure out the right fit together</h2>
+    <p>Get a free consultation today. No pressure, no commitment — just a quick chat about what your business needs.</p>
+    <a href="https://wa.me/254748205591?text=Hi%20Elevate%20Web%20Agency!%20I%27d%20love%20to%20discuss%20pricing%20for%20my%20business." class="btn-primary" target="_blank" style="font-size:1rem; padding:1rem 2rem;">Start the conversation</a>
+  </div>
+</div>
+
+
+</div>
+
+<div class="page" id="page-guides">
+<div class="page-hero">
+  <div class="breadcrumb"><a href="#home" data-page="home">Home</a> / Guides</div>
+  <div class="hero-eyebrow" style="margin-left:auto;margin-right:auto;">Guides</div>
+  <h1>Straight talk on what actually makes a website work</h1>
+  <p>No jargon, no upsell disguised as advice — just what matters if you want your site to load fast and keep working.</p>
+</div>
+
+<section style="padding-top:1rem;">
+  <div class="container">
+    <div class="guides-grid reveal">
+
+      <a href="#guide-speed" data-page="guide-speed" class="guide-card">
+        <div class="guide-card-img">
+          <svg viewBox="0 0 400 160" xmlns="http://www.w3.org/2000/svg">
+            <defs><linearGradient id="gs1" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#1C1C1C"/><stop offset="100%" stop-color="#C9A84C" stop-opacity="0.55"/>
+            </linearGradient></defs>
+            <rect width="400" height="160" fill="url(#gs1)"/>
+            <path d="M20 120 L100 90 L160 105 L230 60 L300 75 L380 30" stroke="#F0EDE6" stroke-opacity="0.5" stroke-width="3" fill="none"/>
+          </svg>
+        </div>
+        <div class="guide-card-body">
+          <div class="guide-card-tag">Website Speed</div>
+          <h3>Why Website Speed Matters (And What's Slowing Yours Down)</h3>
+          <p>How load time affects bookings, Google rankings, and whether a customer stays or leaves.</p>
+        </div>
+      </a>
+
+      <a href="#guide-maintenance" data-page="guide-maintenance" class="guide-card">
+        <div class="guide-card-img">
+          <svg viewBox="0 0 400 160" xmlns="http://www.w3.org/2000/svg">
+            <defs><linearGradient id="gs2" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#0f2a1c"/><stop offset="100%" stop-color="#8FD4A8" stop-opacity="0.5"/>
+            </linearGradient></defs>
+            <rect width="400" height="160" fill="url(#gs2)"/>
+            <circle cx="200" cy="80" r="35" fill="none" stroke="#F0EDE6" stroke-opacity="0.5" stroke-width="3"/>
+            <circle cx="200" cy="80" r="10" fill="#F0EDE6" fill-opacity="0.5"/>
+          </svg>
+        </div>
+        <div class="guide-card-body">
+          <div class="guide-card-tag">Website Maintenance</div>
+          <h3>Why Website Maintenance Matters More Than the Launch</h3>
+          <p>What breaks quietly after launch, and why "set it and forget it" costs businesses real money.</p>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<div class="gold-divider"></div>
+
+<div class="cta-section">
+  <div class="cta-inner reveal">
+    <div class="section-label" style="justify-content:center;">Want this handled for you?</div>
+    <h2>We build it fast and keep it running</h2>
+    <p>Every Elevate site is built with speed in mind, and monthly maintenance is available so you never have to think about it.</p>
+    <a href="https://wa.me/254748205591?text=Hi%20Elevate%20Web%20Agency!%20I%27d%20love%20to%20discuss%20a%20website%20for%20my%20business." class="btn-primary" target="_blank" style="font-size:1rem; padding:1rem 2rem;">Start the conversation</a>
+  </div>
+</div>
+
+
+</div>
+
+<div class="page" id="page-guide-speed">
+<div class="page-hero" style="padding-bottom:1.5rem;">
+  <div class="breadcrumb"><a href="#home" data-page="home">Home</a> / <a href="#guides" data-page="guides">Guides</a> / Website Speed</div>
+  <div class="hero-eyebrow" style="margin-left:auto;margin-right:auto;">Website Speed</div>
+  <h1>Why Website Speed Matters (And What's Slowing Yours Down)</h1>
+  <div class="article-meta">
+    <span>By Jimmy</span><span>·</span><span>Elevate Web Agency</span><span>·</span><span>6 min read</span>
+  </div>
+</div>
+
+<div class="container">
+  <div class="article-hero-img reveal">
+    <svg viewBox="0 0 900 400" xmlns="http://www.w3.org/2000/svg">
+      <defs><linearGradient id="hs" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#0D0D0D"/><stop offset="55%" stop-color="#241C10"/><stop offset="100%" stop-color="#C9A84C" stop-opacity="0.4"/>
+      </linearGradient></defs>
+      <rect width="900" height="400" fill="url(#hs)"/>
+      <path d="M40 320 L180 260 L300 290 L420 190 L540 220 L680 100 L860 60" stroke="#C9A84C" stroke-width="4" fill="none" stroke-opacity="0.8"/>
+      <circle cx="860" cy="60" r="7" fill="#C9A84C"/>
+    </svg>
+  </div>
+</div>
+
+<section>
+  <div class="article-body reveal">
+
+    <p>Here's a number that should worry any business owner with a website: most visitors decide whether to stay or leave within the first few seconds of a page loading. On a slow connection — which is most mobile data in Kenya — a badly built site can take that long just to show a logo.</p>
+
+    <p>Speed isn't a "nice to have." It's the difference between a visitor becoming a customer and a visitor bouncing straight to your competitor's WhatsApp number instead.</p>
+
+    <h2>Why speed actually matters</h2>
+
+    <h3>1. Customers don't wait</h3>
+    <p>Someone searching "hotel in Mombasa" or "bridal makeup Nairobi" on their phone, standing in traffic, on patchy 4G, is not going to sit and watch a spinning loader. If your site takes more than a few seconds, they've already tapped back to Google and clicked the next result.</p>
+
+    <h3>2. Google ranks fast sites higher</h3>
+    <p>Page speed is a direct ranking factor in Google's algorithm. Two businesses can have near-identical content, but the faster site wins more visibility in search results — meaning slow sites don't just lose the visitor who's already there, they get shown to fewer people in the first place.</p>
+
+    <h3>3. It affects how trustworthy you look</h3>
+    <p>A slow, janky site quietly tells a visitor "this business might not be that serious." A fast, clean one does the opposite — speed is part of first impressions, even if no one consciously notices it.</p>
+
+    <h3>4. Mobile data costs money</h3>
+    <p>A bloated website eats through a visitor's data bundle before they've even seen your prices. In a market where most browsing happens on prepaid mobile data, a lightweight site is a small kindness that keeps people around.</p>
+
+    <div class="article-pullquote">A one-second delay in load time can measurably reduce conversions — on a site trying to turn visitors into bookings, that's real money walking away silently.</div>
+
+    <h2>What's actually slowing your site down</h2>
+
+    <ul>
+      <li><strong>Oversized images.</strong> A single unoptimized photo can be heavier than an entire well-built page. Images should be compressed and sized for the screen they'll display on.</li>
+      <li><strong>Heavy page builders and plugins.</strong> Drag-and-drop website builders often load far more code than a page actually needs, just to render a simple layout.</li>
+      <li><strong>Too many external scripts.</strong> Chat widgets, tracking pixels, and font libraries all add extra requests — each one is a small tax on load time.</li>
+      <li><strong>No caching or CDN.</strong> Without caching, a server rebuilds the entire page from scratch on every single visit, instead of serving a ready-made fast copy.</li>
+      <li><strong>Cheap or overloaded hosting.</strong> Even a perfectly built site will feel slow if it's sitting on hosting that can't handle its traffic.</li>
+    </ul>
+
+    <h2>What a fast site looks like in practice</h2>
+    <p>Every Elevate build starts mobile-first and lightweight by default — no bloated builders, compressed images, and clean code that doesn't load anything the page doesn't need. Studio Pro and Premium packages add caching and CDN setup on top of that baseline, for businesses that need every second they can get.</p>
+
+    <div class="article-cta">
+      <h3>Want a speed check on your current site?</h3>
+      <p>Send us your link on WhatsApp and we'll tell you honestly what's slowing it down.</p>
+      <a href="https://wa.me/254748205591?text=Hi%20Elevate%20Web%20Agency!%20Can%20you%20check%20my%20website%27s%20speed%3F" class="pricing-cta" target="_blank">Get a free speed check ↗</a>
+    </div>
+
+  </div>
+
+  <div class="related-guides reveal">
+    <a href="#guide-maintenance" data-page="guide-maintenance" class="btn-secondary">Next: Why Maintenance Matters ↗</a>
+    <a href="#pricing" data-page="pricing" class="btn-secondary">See Pricing ↗</a>
+  </div>
+</section>
+
+
+</div>
+
+<div class="page" id="page-guide-maintenance">
+<div class="page-hero" style="padding-bottom:1.5rem;">
+  <div class="breadcrumb"><a href="#home" data-page="home">Home</a> / <a href="#guides" data-page="guides">Guides</a> / Website Maintenance</div>
+  <div class="hero-eyebrow" style="margin-left:auto;margin-right:auto;">Website Maintenance</div>
+  <h1>Why Website Maintenance Matters More Than the Launch</h1>
+  <div class="article-meta">
+    <span>By Jimmy</span><span>·</span><span>Elevate Web Agency</span><span>·</span><span>6 min read</span>
+  </div>
+</div>
+
+<div class="container">
+  <div class="article-hero-img reveal">
+    <svg viewBox="0 0 900 400" xmlns="http://www.w3.org/2000/svg">
+      <defs><linearGradient id="hm" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#0a1a12"/><stop offset="55%" stop-color="#0f2a1c"/><stop offset="100%" stop-color="#8FD4A8" stop-opacity="0.4"/>
+      </linearGradient></defs>
+      <rect width="900" height="400" fill="url(#hm)"/>
+      <circle cx="450" cy="200" r="90" fill="none" stroke="#8FD4A8" stroke-opacity="0.6" stroke-width="4"/>
+      <circle cx="450" cy="200" r="20" fill="#8FD4A8" fill-opacity="0.7"/>
+      <circle cx="620" cy="120" r="35" fill="none" stroke="#8FD4A8" stroke-opacity="0.4" stroke-width="3"/>
+    </svg>
+  </div>
+</div>
+
+<section>
+  <div class="article-body reveal">
+
+    <p>A website launch feels like the finish line. In reality, it's the starting point. The businesses that get the most out of their site aren't the ones with the flashiest launch day — they're the ones who keep it updated, secure, and working long after the excitement wears off.</p>
+
+    <p>"Set it and forget it" is one of the most expensive mistakes a business owner can make with their website.</p>
+
+    <h2>What actually breaks after launch</h2>
+
+    <h3>1. Content goes stale</h3>
+    <p>Prices change. Menus change. New services get added. A site frozen in time from launch day quietly starts lying to your customers — and nothing kills trust faster than a visitor calling about a price that's a year out of date.</p>
+
+    <h3>2. Security gaps open up</h3>
+    <p>Software, plugins, and hosting environments get updated constantly — often because a security hole was found and patched. A site that never gets touched after launch slowly becomes an easier target, even if nothing about it looks different on the surface.</p>
+
+    <h3>3. Broken links and forms go unnoticed</h3>
+    <p>A booking form that quietly stops sending notifications, or a WhatsApp link that breaks after a number change, can sit broken for months — silently costing you every inquiry that hits it — unless someone is actually checking.</p>
+
+    <h3>4. Google notices neglect</h3>
+    <p>Search engines favor sites that show signs of life — fresh content, working links, active maintenance. A site that never changes after launch can slowly lose the ranking position it started with.</p>
+
+    <div class="article-pullquote">The cost of neglect is invisible until the day it isn't — a missed booking, a lost inquiry, or a customer who quietly stopped trusting the site.</div>
+
+    <h2>What good maintenance actually covers</h2>
+
+    <ul>
+      <li><strong>Regular backups.</strong> So a technical problem is a minor inconvenience, not a disaster.</li>
+      <li><strong>Security monitoring and updates.</strong> Keeping the software your site runs on current and protected.</li>
+      <li><strong>Performance checks.</strong> Catching the slow creep of added images, scripts, or plugins before it becomes a real speed problem — see our guide on <a href="#guide-speed" data-page="guide-speed" style="color:var(--gold);">why speed matters</a>.</li>
+      <li><strong>Content updates.</strong> Prices, hours, photos, and offers kept current without you needing to touch a line of code.</li>
+      <li><strong>Uptime checks.</strong> Making sure the site is actually reachable, and catching outages before a customer does.</li>
+    </ul>
+
+    <h2>How Elevate handles it</h2>
+    <p>Every package includes a free SSL setup and a solid technical foundation at launch. From there, optional monthly maintenance starting at KES 3,000/month keeps things updated, secure, and running — so the business that trusted us with their launch doesn't have to think about their website again unless they want to.</p>
+
+    <div class="article-cta">
+      <h3>Already have a site that's been neglected?</h3>
+      <p>Send us the link and we'll tell you honestly what shape it's in.</p>
+      <a href="https://wa.me/254748205591?text=Hi%20Elevate%20Web%20Agency!%20Can%20you%20check%20on%20my%20website%27s%20maintenance%20needs%3F" class="pricing-cta" target="_blank">Get a free site check ↗</a>
+    </div>
+
+  </div>
+
+  <div class="related-guides reveal">
+    <a href="#guide-speed" data-page="guide-speed" class="btn-secondary">← Why Speed Matters</a>
+    <a href="#pricing" data-page="pricing" class="btn-secondary">See Pricing ↗</a>
+  </div>
+</section>
+
+
+</div>
+
+</div><!-- /#app -->
 
 <!-- FOOTER -->
 <footer>
   <div class="footer-logo">Elevate<span>.</span></div>
   <div class="footer-links">
-    <a href="#services">Services</a>
-    <a href="#portfolio">Portfolio</a>
-    <a href="#reviews">Reviews</a>
+    <a href="#about" data-page="about">About</a>
+    <a href="#portfolio" data-page="portfolio">Portfolio</a>
+    <a href="#pricing" data-page="pricing">Pricing</a>
+    <a href="#guides" data-page="guides">Guides</a>
     <a href="https://wa.me/254748205591" target="_blank">Contact</a>
   </div>
-  <div class="footer-copy">© 2025 Elevate Web Agency · Mombasa & Nairobi, Kenya · Built with ❤️ for Kenyan businesses</div>
+  <div class="footer-copy">© 2025 Elevate Web Agency · Jimmy · Mombasa, Kenya · Built with ❤️ for Kenyan businesses</div>
 </footer>
 
 <!-- WHATSAPP FLOAT -->
@@ -652,11 +1286,122 @@
   <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
 </a>
 
+<!-- BACK TO TOP -->
+<button class="to-top" id="toTop" aria-label="Back to top">↑</button>
+
 <script>
+// ---------- SPA ROUTER ----------
+const pageTitles = {
+  'home': "Elevate Web Agency — Web Design & Digital Automation in Mombasa, Kenya",
+  'about': "About Elevate Web Agency — Meet Jimmy",
+  'portfolio': "Portfolio — Elevate Web Agency, Mombasa",
+  'pricing': "Pricing — Elevate Web Agency, Mombasa",
+  'guides': "Guides — Elevate Web Agency",
+  'guide-speed': "Why Website Speed Matters | Elevate Web Agency",
+  'guide-maintenance': "Why Website Maintenance Matters | Elevate Web Agency"
+};
+
+function navigateTo(pageId, opts) {
+  opts = opts || {};
+  const target = document.getElementById('page-' + pageId);
+  if (!target) return;
+
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  target.classList.add('active');
+
+  document.querySelectorAll('[data-page]').forEach(a => {
+    a.classList.toggle('active', a.dataset.page === pageId);
+  });
+
+  if (pageTitles[pageId]) document.title = pageTitles[pageId];
+  if (!opts.skipHistory) history.pushState(null, '', '#' + pageId);
+
+  // reveal everything in the newly active page immediately
+  target.querySelectorAll('.reveal').forEach(el => el.classList.add('visible'));
+
+  // close mobile nav
+  navLinks.classList.remove('open');
+  navToggle.setAttribute('aria-expanded', false);
+  navToggle.textContent = '☰';
+
+  if (opts.scrollTo) {
+    requestAnimationFrame(() => {
+      const el = document.getElementById(opts.scrollTo);
+      if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+  } else {
+    window.scrollTo({ top: 0, behavior: 'instant' in window ? 'instant' : 'auto' });
+  }
+
+  if (pageId === 'home') startCounters();
+}
+
+document.querySelectorAll('[data-page]').forEach(el => {
+  el.addEventListener('click', e => {
+    e.preventDefault();
+    navigateTo(el.dataset.page, { scrollTo: el.dataset.scroll ? el.dataset.scroll : null });
+  });
+});
+
+window.addEventListener('popstate', () => {
+  const id = location.hash.replace('#', '') || 'home';
+  navigateTo(id, { skipHistory: true });
+});
+
+// ---------- MOBILE NAV ----------
+const navToggle = document.getElementById('navToggle');
+const navLinks = document.getElementById('navLinks');
+navToggle.addEventListener('click', () => {
+  const isOpen = navLinks.classList.toggle('open');
+  navToggle.setAttribute('aria-expanded', isOpen);
+  navToggle.textContent = isOpen ? '✕' : '☰';
+});
+
+// ---------- FAQ ACCORDION ----------
+document.querySelectorAll('.faq-q').forEach(btn => {
+  btn.addEventListener('click', () => {
+    btn.parentElement.classList.toggle('open');
+  });
+});
+
+// ---------- SCROLL REVEAL (for elements below the fold on the active page) ----------
 const observer = new IntersectionObserver((entries) => {
-  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); } });
+  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
 }, { threshold: 0.12 });
 document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+// ---------- ANIMATED HERO COUNTERS ----------
+let countersStarted = false;
+function startCounters() {
+  if (countersStarted) return;
+  countersStarted = true;
+  document.querySelectorAll('.stat-num[data-count]').forEach(el => {
+    const end = parseFloat(el.dataset.count);
+    const suffixEl = el.querySelector('span');
+    const suffix = suffixEl ? suffixEl.outerHTML : '';
+    const duration = 1100;
+    const start = performance.now();
+    function tick(now) {
+      const progress = Math.min((now - start) / duration, 1);
+      const eased = 1 - Math.pow(1 - progress, 3);
+      const val = Math.round(end * eased);
+      el.innerHTML = val + suffix;
+      if (progress < 1) requestAnimationFrame(tick);
+    }
+    requestAnimationFrame(tick);
+  });
+}
+
+// ---------- BACK TO TOP ----------
+const toTop = document.getElementById('toTop');
+window.addEventListener('scroll', () => {
+  toTop.classList.toggle('show', window.scrollY > 500);
+});
+toTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+// ---------- INIT ----------
+const initialId = location.hash.replace('#', '') || 'home';
+navigateTo(initialId, { skipHistory: true });
 </script>
 </body>
 </html>
